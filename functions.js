@@ -17,3 +17,6 @@ async function loadData() {
     copy.querySelector('.spreadsheets--d_rate').textContent = (Math.round(entry.d_rate*10000)/100).toFixed(2)+"%";
     if (entry.ticker == tickerName){spreadsheets.appendChild(copy)};
   });
+
+// tbody要素にある最後の行（tr要素）を削除
+spreadsheets.deleteRow(0);
