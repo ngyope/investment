@@ -9,4 +9,4 @@
         request.open('GET', dataPath, true); // csvのパスを指定
         request.send();
     }
-    csv_data('dividends/etf_dividend_monthly - data.csv'); // csvのパス
+    return csv_data('dividends/etf_dividend_monthly - data.csv'); // csvのパス
