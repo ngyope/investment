@@ -9,4 +9,4 @@
         request.open('GET', dataPath, true); // csvのパスを指定
         request.send();
     }
-    csv_data('https://github.com/ngyope/investment/blob/main/dividends/etf_dividend_monthly%20-%20data.csv'); // csvのパス
+    csv_data('dividends/etf_dividend_monthly - data.csv'); // csvのパス
