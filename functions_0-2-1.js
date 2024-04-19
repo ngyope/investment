@@ -22,3 +22,6 @@ async function loadData(tickerName) {
 }
 
 loadData(tickerName);
+
+var elements = document.getElementsByClassName('spreadsheets--year');
+elements[1].style.backgroundColor = "#00ff00";
