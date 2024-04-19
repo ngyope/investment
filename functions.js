@@ -1,9 +1,8 @@
-const tickerName = "PFFD"
 const baseHtml = document.querySelector('.spreadsheets--item.js-base');
 const spreadsheets = document.querySelector('.spreadsheets');
 const apiURL = 'https://script.google.com/macros/s/AKfycbxCgxVLRXgZtow0mRXYadWtb9YreVXvTfzhiidarBzFbCxNXvKeSezusALt_JxeXbWDvA/exec';
 
-async function loadData() {
+async function loadData(tickerName) {
   const response = await fetch(apiURL);
   const data = await response.json();
   data.forEach(entry => {
