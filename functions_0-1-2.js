@@ -20,3 +20,5 @@ async function loadData(tickerName) {
   // tbody要素にある最後の行（tr要素）を削除
   spreadsheets.deleteRow(0);
 }
+
+loadData();
