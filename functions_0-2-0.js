@@ -21,4 +21,4 @@ async function loadData(tickerName) {
   spreadsheets.deleteRow(0);
 }
 
-loadData();
+loadData(tickerName);
