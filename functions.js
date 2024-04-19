@@ -18,5 +18,6 @@ async function loadData() {
     if (entry.ticker == tickerName){spreadsheets.appendChild(copy)};
   });
 
-// tbody要素にある最後の行（tr要素）を削除
-spreadsheets.deleteRow(0);
+  // tbody要素にある最後の行（tr要素）を削除
+  spreadsheets.deleteRow(0);
+};
