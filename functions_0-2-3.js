@@ -12,7 +12,7 @@ async function loadYearlyData(tickerName) {
     copy.querySelector('.spreadsheets--year').textContent = entry.year;
     copy.querySelector('.spreadsheets--dividend').textContent = "$"+entry.dividend.toFixed(4);
     copy.querySelector('.spreadsheets--d_growth').textContent = (Math.round(entry.d_growth*10000)/100).toFixed(2)+"%";
-    copy.querySelector('.spreadsheets--close').textContent = "$"+entry.close;
+    copy.querySelector('.spreadsheets--close').textContent = "$"+(Math.round(entry.close*100)/100).toFixed(2);
     copy.querySelector('.spreadsheets--d_rate').textContent = (Math.round(entry.d_rate*10000)/100).toFixed(2)+"%";
     if (entry.ticker == tickerName){spreadsheets_y.appendChild(copy)};
   });
