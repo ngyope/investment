@@ -14,7 +14,7 @@ async function loadData(tickerName) {
     copy.querySelector('.spreadsheets--d_growth').textContent = (Math.round(entry.d_growth*10000)/100).toFixed(2)+"%";
     copy.querySelector('.spreadsheets--close').textContent = "$"+entry.close;
     copy.querySelector('.spreadsheets--d_rate').textContent = (Math.round(entry.d_rate*10000)/100).toFixed(2)+"%";
-    if (entry.ticker == tickerName){spreadsheets.appendChild(copy)};
+    if (entry.ticker == "PFFD"){spreadsheets.appendChild(copy)};
   });
 
   // tbody要素にある最後の行（tr要素）を削除
