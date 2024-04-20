@@ -1,6 +1,6 @@
 const baseHtml_mo = document.querySelector('.spreadsheets--item.js-base-mo');
 const spreadsheets_mo = document.querySelector('.spreadsheets-mo');
-const apiURL_mo = 'https://script.google.com/macros/s/AKfycbyw4ejKgYXiHTnjqfchH-sR-n9abpF4W4m1BUTQdPx4c-TV9FJ47o9KlW9M5G5FHdqLSQ/exec';
+const apiURL_mo = 'https://script.google.com/macros/s/AKfycbxpzKvz586xLZ63KMuVa1pYIsr-6XpQXrvX3lOZp1I5eUdxJY_PPxcZZ9wY7Gvp102u9A/exec';
 
 async function loadMonthlyData(tickerName) {
   const response = await fetch(apiURL_mo);
