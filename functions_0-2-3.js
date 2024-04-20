@@ -1,6 +1,6 @@
 const baseHtml_y = document.querySelector('.spreadsheets--item.js-base-y');
 const spreadsheets_y = document.querySelector('.spreadsheets-y');
-const apiURL_y = 'https://script.google.com/macros/s/AKfycbxCgxVLRXgZtow0mRXYadWtb9YreVXvTfzhiidarBzFbCxNXvKeSezusALt_JxeXbWDvA/exec';
+const apiURL_y = 'https://script.google.com/macros/s/AKfycbw2OG8sH3W8SG5__LKvp1HW0ymGWbZwRjdMI6UrQFKgL7GdazOWQYz1lFmQi-paEULSZw/exec';
 
 async function loadYearlyData(tickerName) {
   const response = await fetch(apiURL_y);
