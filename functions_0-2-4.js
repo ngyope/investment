@@ -9,7 +9,7 @@ async function loadYearlyData(tickerName) {
     const copy = baseHtml_y.cloneNode(true);
     copy.classList.remove('js-base');
     copy.querySelector('.spreadsheets--ticker').textContent = entry.ticker;
-    copy.querySelector('.spreadsheets--year').textContent = entry.year;
+    copy.querySelector('.spreadsheets--year').textContent = entry.year_label;
     copy.querySelector('.spreadsheets--dividend').textContent = "$"+entry.dividend.toFixed(4);
     copy.querySelector('.spreadsheets--d_growth').textContent = (Math.round(entry.d_growth*10000)/100).toFixed(2)+"%";
     copy.querySelector('.spreadsheets--close').textContent = "$"+(Math.round(entry.close*100)/100).toFixed(2);
