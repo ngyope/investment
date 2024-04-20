@@ -1,6 +1,5 @@
 const baseHtml_mo = document.querySelector('.spreadsheets--item.js-base-mo');
 const spreadsheets_mo = document.querySelector('.spreadsheets-mo');
-const apiURL_mo = 'https://script.google.com/macros/s/AKfycbxpzKvz586xLZ63KMuVa1pYIsr-6XpQXrvX3lOZp1I5eUdxJY_PPxcZZ9wY7Gvp102u9A/exec';
 
 async function loadMonthlyData(tickerName) {
   const response = await fetch(apiURL_mo);
