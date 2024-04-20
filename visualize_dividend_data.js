@@ -30,7 +30,7 @@ function drawDividendChart(df) {
 
 function drawDividendGrowthChart(df) {
   var chart_data = google.visualization.arrayToDataTable(df);
-  var ac = new google.visualization.LineChart(document.getElementById('income_chart_dividend_growth'));
+  var ac = new google.visualization.SteppedAreaChart(document.getElementById('income_chart_dividend_growth'));
 
   var options = {
     title: '分配金 (配当) の増配率の推移',
