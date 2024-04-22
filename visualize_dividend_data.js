@@ -39,7 +39,7 @@ function drawDividendGrowthChart(df) {
       { type: 'lines', targetAxisIndex: 0 }
     ],
     vAxes: [
-      { title: '分配金(年間)', format: 'percent' }
+      { title: '分配金(年間)', format: 'percent', minValue: -1, maxValue: 1 }
     ]
   };
 
