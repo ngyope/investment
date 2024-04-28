@@ -1,5 +1,3 @@
-//   const apiURL_y = 'https://script.google.com/macros/s/AKfycbw2OG8sH3W8SG5__LKvp1HW0ymGWbZwRjdMI6UrQFKgL7GdazOWQYz1lFmQi-paEULSZw/exec';
-
 var df1 = [['年', '分配金']];
 var df2 = [['年', '増配率']];
 var df3 = [['年', '分配金利回り']];
