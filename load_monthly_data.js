@@ -6,11 +6,13 @@ async function loadMonthlyData(tickerName) {
   const data = await response.json();
   data.forEach(entry => {
     const copy = baseHtml_mo.cloneNode(true);
-    copy.classList.remove('js-base');
-    copy.querySelector('.spreadsheets--ticker').textContent = entry.ticker;
-    copy.querySelector('.spreadsheets--month').textContent = entry.month_label;
-    copy.querySelector('.spreadsheets--dividend').textContent = "$"+entry.dividend.toFixed(4);
-    if (entry.ticker == tickerName){spreadsheets_mo.appendChild(copy)};
+    if (entry.ticker == tickerName){
+      copy.classList.remove('js-base');
+      copy.querySelector('.spreadsheets--ticker').textContent = entry.ticker;
+      copy.querySelector('.spreadsheets--month').textContent = entry.month_label;
+      copy.querySelector('.spreadsheets--dividend').textContent = "$"+entry.dividend.toFixed(4);
+      spreadsheets_mo.appendChild(copy)
+    };
   });
 
   // tbody要素にある最後の行（tr要素）を削除
