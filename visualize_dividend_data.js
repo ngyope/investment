@@ -118,13 +118,13 @@ async function loadYearlyDividendData(tickerName) {
       };
 
       year_count += 1;
-      total_return = total_return * parseFloat(Math.pow(Math.round((1 + entry.annual_return) * 10000) / 10000), 1 / year_count).toFixed(4);
+      total_return = total_return * parseFloat((Math.round(1 + entry.annual_return) * 10000) / 10000).toFixed(4);
 
       var line1 = [entry.year_label, parseFloat(entry.dividend.toFixed(4))];
       var line2 = [entry.year_label, parseFloat((Math.round(entry.d_growth * 10000) / 10000).toFixed(4))];
       var line3 = [entry.year_label, parseFloat((Math.round(entry.d_rate * 10000) / 10000).toFixed(4))];
       var line4 = [entry.year_label, parseFloat((Math.round(dividend_for_yoc / entry.close * 10000) / 10000).toFixed(4))];
-      var line5 = [year_count, total_return];
+      var line5 = [year_count, Math.pow(total_return, (1 / year_count)];
       
       df1.splice(1, 0, line1);
       df2.splice(1, 0, line2);
