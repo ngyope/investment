@@ -117,8 +117,8 @@ async function loadYearlyDividendData(tickerName) {
         dividend_for_yoc = parseFloat(entry.dividend.toFixed(4));
       };
 
-      total_return = total_return * parseFloat(Math.round((1 + entry.annual_return) * 10000) / 10000).toFixed(4);
       year_count += 1;
+      total_return = total_return * parseFloat(Math.pow(Math.round((1 + entry.annual_return) * 10000) / 10000), 1 / year_count).toFixed(4);
 
       var line1 = [entry.year_label, parseFloat(entry.dividend.toFixed(4))];
       var line2 = [entry.year_label, parseFloat((Math.round(entry.d_growth * 10000) / 10000).toFixed(4))];
