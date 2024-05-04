@@ -2,7 +2,7 @@ var df1 = [['年', '分配金']];
 var df2 = [['年', '増配率']];
 var df3 = [['年', '分配金利回り']];
 var df4 = [['年', 'YoC']];
-var df4 = [['経過年', 'トータルリターン']];
+var df5 = [['経過年', 'トータルリターン']];
 
 function drawDividendChart(df) {
   var chart_data = google.visualization.arrayToDataTable(df);
