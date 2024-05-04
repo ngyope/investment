@@ -1,3 +1,4 @@
+
 var df1 = [['年', '分配金']];
 var df2 = [['年', '増配率']];
 var df3 = [['年', '分配金利回り']];
@@ -117,14 +118,15 @@ async function loadYearlyDividendData(tickerName) {
         dividend_for_yoc = parseFloat(entry.dividend.toFixed(4));
       };
 
-      total_return = total_return * parseFloat((Math.round(1 + entry.annual_return) * 10000) / 10000).toFixed(4);
+      // total_return = total_return * parseFloat((Math.round(1 + entry.annual_return) * 10000) / 10000).toFixed(4);
+      total_return = total_return * parseFloat(1 + entry.annual_return);
       year_count += 1;
 
       var line1 = [entry.year_label, parseFloat(entry.dividend.toFixed(4))];
       var line2 = [entry.year_label, parseFloat((Math.round(entry.d_growth * 10000) / 10000).toFixed(4))];
       var line3 = [entry.year_label, parseFloat((Math.round(entry.d_rate * 10000) / 10000).toFixed(4))];
       var line4 = [entry.year_label, parseFloat((Math.round(dividend_for_yoc / entry.close * 10000) / 10000).toFixed(4))];
-      var line5 = [year_count, Math.pow(total_return, (1 / year_count)];
+      var line5 = [year_count, parseFloat(Math.pow(total_return, (1 / year_count)).toFixed(4)) - 1];
       
       df1.splice(1, 0, line1);
       df2.splice(1, 0, line2);
