@@ -161,9 +161,9 @@ async function loadYearlyDividendData(tickerName, tickerName_2) {
                 df_div_rate[target_row].splice(2, 2, parseFloat((Math.round(entry.d_rate * 10000) / 10000).toFixed(4)));
                 df_yoc[target_row].splice(2, 2, parseFloat((Math.round(dividend_for_yoc / entry.close * 10000) / 10000).toFixed(4)));
                 df_total_return[target_row].splice(2, 2, parseFloat(Math.pow(total_return, (1 / year_count)).toFixed(4)) - 1);
+                
+                row += 1;
             }
-
-            row += 1;
         }
     });
     
