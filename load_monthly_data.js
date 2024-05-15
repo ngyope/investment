@@ -23,7 +23,7 @@ async function loadMonthlyData(tickerName) {
 
   document.getElementById('latest-div-month').textContent = df_monthly_dividend[0][1];
   document.getElementById('latest-monthly-div').textContent = df_monthly_dividend[0][2];
-  document.getElementById('latest-monthly-div-change-rate').textContent = ((df_monthly_dividend[0][2] / df_monthly_dividend[1][2]).toFixed(4) * 100) + "%";
+  document.getElementById('latest-monthly-div-change-rate').textContent = (parseFloat(df_monthly_dividend[0][2] / df_monthly_dividend[1][2]).toFixed(4) * 100) + "%";
 }
 
 loadMonthlyData(tickerName); 
